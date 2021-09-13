@@ -22,6 +22,7 @@ class ControladorEmpleados{
             $nombre=$_POST['nombre'];
             $correo=$_POST['correo'];
             Empleado::crear($nombre,$correo);
+            header("Location:./?controlador=empleados&accion=inicio");
         }
         include_once("vistas/empleados/crear.php");
 
