@@ -8,12 +8,16 @@
         </tr>
     </thead>
     <tbody>
+
+    <?php foreach ($empleados as $empleado) { ?>
         <tr>
-            <td> 1 </td>
-            <td> Fresh C </td>
-            <td>fresh@hotmail.com</td>
+            <td> <?php echo $empleado->id; ?> </td>
+            <td>  <?php echo $empleado->nombre; ?>  </td>
+            <td> <?php echo $empleado->correo; ?></td>
             <td> Editar | Borrar </td>
         </tr>
      
+
+       <?php } ?>
     </tbody>
 </table>
