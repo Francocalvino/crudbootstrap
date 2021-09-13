@@ -31,7 +31,15 @@ class ControladorEmpleados{
         include_once("vistas/empleados/editar.php");
 
     }
+    public function borrar(){
+        print_r($_GET);
+        $id=$_GET['id'];
 
+        Empleado::borrar($id);
+
+        header("Location:./?controlador=empleados&accion=inicio");
+    }
+    
 }
 
 ?>

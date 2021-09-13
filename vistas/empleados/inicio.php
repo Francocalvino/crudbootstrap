@@ -1,3 +1,6 @@
+
+<a name="" id="" class="btn btn-success" href="?controlador=empleados&accion=crear" role="button">Agregar Empleado</a>
+
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -11,10 +14,19 @@
 
     <?php foreach ($empleados as $empleado) { ?>
         <tr>
-            <td> <?php echo $empleado->id; ?> </td>
+            <td> <?php echo $empleado->id; ?>    </td>
             <td>  <?php echo $empleado->nombre; ?>  </td>
-            <td> <?php echo $empleado->correo; ?></td>
-            <td> Editar | Borrar </td>
+            <td> <?php echo $empleado->correo; ?>  </td>
+            <td> 
+              <div class="btn-group" role="group" aria-label="">
+
+                  <a href="#" class="btn btn-info">Editar</a>
+                  <a href="?controlador=empleados&accion=borrar&id=<?php echo $empleado->id; ?>" class="btn btn-danger">Borrar</a>
+                  
+              </div>  
+            
+        
+            </td>
         </tr>
      
 
