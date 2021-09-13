@@ -19,7 +19,7 @@ class Empleado{
 
         foreach($sql->fecthAll() as $empleado){
 
-            $listaEmpleados[] = new Empleado($empleado['id'],$empleado['nombre'],$empleado['correo'])
+            $listaEmpleados[] = new Empleado($empleado['id'],$empleado['nombre'],$empleado['correo']);
         }
 
         return $listaEmpleados;
