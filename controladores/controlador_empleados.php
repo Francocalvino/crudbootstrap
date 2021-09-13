@@ -9,6 +9,8 @@ class ControladorEmpleados{
 
     public function inicio(){
 
+        print_r(Empleado::consultar());
+        
         include_once("vistas/empleados/inicio.php");
 
     }

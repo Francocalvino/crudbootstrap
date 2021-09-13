@@ -6,7 +6,8 @@ class Empleado{
     public $id;
     public $nombre;
     public $correo;
-    public function __construct($id, $nombre, $corre){
+
+    public function __construct($id, $nombre, $correo) {
         $this->id=$id;
         $this->nombre=$nombre;
         $this->correo=$correo;
@@ -17,7 +18,7 @@ class Empleado{
         $conexionBD=BD::crearInstancia();
         $sql= $conexionBD->query("SELECT * FROM empleados");
 
-        foreach($sql->fecthAll() as $empleado){
+        foreach($sql->fetchAll() as $empleado){
 
             $listaEmpleados[] = new Empleado($empleado['id'],$empleado['nombre'],$empleado['correo']);
         }

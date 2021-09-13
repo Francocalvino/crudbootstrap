@@ -1,7 +1,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>ID0</th>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Correo</th>
             <th>Acciones</th>
